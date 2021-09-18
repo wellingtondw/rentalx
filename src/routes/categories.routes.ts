@@ -10,7 +10,13 @@ categoriesRoutes.post("/", (req, res) => {
 
   categoriesRepository.create({ name, description });
 
-  res.status(201).send();
+  return res.status(201).send();
+});
+
+categoriesRoutes.get("/", (req, res) => {
+  const all = categoriesRepository.list();
+
+  return res.json(all);
 });
 
 export default categoriesRoutes;
