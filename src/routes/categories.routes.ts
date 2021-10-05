@@ -24,4 +24,4 @@ categoriesRoutes.post(
   importCategoriesController.handle
 );
 
-export default categoriesRoutes;
+export { categoriesRoutes };
