@@ -15,14 +15,12 @@ class CreateUserUseCase {
     password,
     driver_license,
     email,
-    username,
   }: ICreateUserDTO): Promise<void> {
     await this.usersRepository.create({
       name,
       password,
       driver_license,
       email,
-      username,
     });
   }
 }
